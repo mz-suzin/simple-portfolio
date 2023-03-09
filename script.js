@@ -6,13 +6,6 @@ const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
 const textBox = document.getElementById('text-box');
 
-// Dark or Light Images
-function imageMode(theme) {
-    image1.src = `img/undraw_proud_coder_${theme}.svg`;
-    image2.src = `img/undraw_feeling_proud_${theme}.svg`;
-    image3.src = `img/undraw_conceptual_idea_${theme}.svg`;
-}
-
 // Dark or Light Mode Styles
 function toggleTheme(isDark) {
     nav.style.backgroundColor = isDark ? 'rgb(0 0 0 / 50%)' : 'rgb(255 255 255 / 50%)';
@@ -21,7 +14,6 @@ function toggleTheme(isDark) {
     // because toggleIcon is a <span> with 2 children inside, we need to access them like stated below
     toggleIcon.children[0].textContent = isDark ? 'Dark Mode' : 'Light Mode';
     isDark ? toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon') : toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
-    isDark ? imageMode('dark') : imageMode('light');
 }
 
 // Switch Themes Dynamically
